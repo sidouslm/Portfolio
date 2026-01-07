@@ -1,2 +1,2 @@
-# Fullstcak portfolio
-portfolio
+# portfolio
+A fullstack dev portfolio

@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+* {
+
+  box-sizing: border-box;
+
+  font-family: 'Pilcrow Rounded';
+}
+ body {
+  background-color: #020617;
+ }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width:680px) {
+    a.active {
+        background-color: #334155;
+        color:oklch(96.8% 0.007 247.896);
+    }
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
