@@ -20,22 +20,11 @@ const Hero = () => {
             {/* Main Heading with Profile Picture */}
             <div className="mb-8 flex flex-col lg:flex-row items-center gap-8 justify-center lg:justify-start">
               {/* Profile Picture - Large and prominent */}
-              <link rel="preload" as="image" href={assets.ProfilePic} />
-
-              <div className="lg:order-2 lg:ml-8 relative">
-                {/* Blurred placeholder */}
-                <div className="absolute inset-0 bg-slate-800/30 backdrop-blur-sm rounded-3xl animate-pulse"></div>
-
+              <div className="lg:order-2 lg:ml-8">
                 <img
-                  className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl object-cover object-center border-4 border-slate-800/50 shadow-2xl shadow-slate-900/50 opacity-0 transition-opacity duration-500"
+                  className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl object-cover object-center border-4 border-slate-800/50 shadow-2xl shadow-slate-900/50 transform hover:scale-105 transition-transform duration-300"
                   src={assets.ProfilePic}
                   alt="Sidou - Full Stack Developer"
-                  loading="eager" // Load immediately (critical image)
-                  decoding="async"
-                  onLoad={(e) => {
-                    e.target.classList.remove('opacity-0');
-                    e.target.classList.add('opacity-100');
-                  }}
                 />
               </div>
 
