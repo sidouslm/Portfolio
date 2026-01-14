@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="min-h-max flex items-center justify-center mt-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto w-full">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
-          
+
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
             {/* Welcome Badge */}
@@ -17,60 +17,76 @@ const Hero = () => {
             </div>
 
             {/* Main Heading */}
-            <div className="mb-6">
-              <h1 
-                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-meduim text-slate-200  leading-tight"
-                style={{ fontFamily: 'Array, sans-serif' }}
-              >
-                Hey, I'm
-                <span className="block text-transparent text-5xl sm:text-6xl md:text-7xl lg:text-8xl  bg-clip-text bg-gradient-to-r from-slate-300 to-slate-500 mt-2">
-                  Sidou
-                </span>
-              </h1>
-              <div className="flex items-center justify-center lg:justify-start gap-3 mt-6">
-                <div className="w-12 h-0.5 bg-slate-600/50"></div>
-                <img 
-                  className="w-10 h-10 transform hover:rotate-12 transition-transform duration-300" 
-                  src={assets.PeaceLogo} 
-                  alt="Peace" 
+            {/* Main Heading with Profile Picture */}
+            <div className="mb-8 flex flex-col lg:flex-row items-center gap-8 justify-center lg:justify-start">
+              {/* Profile Picture - Large and prominent */}
+              <div className="lg:order-2 lg:ml-8">
+                <img
+                  className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl object-cover object-center border-4 border-slate-800/50 shadow-2xl shadow-slate-900/50 transform hover:scale-105 transition-transform duration-300"
+                  src={assets.ProfilePic}
+                  alt="Sidou - Full Stack Developer"
                 />
-                <div className="w-12 h-0.5 bg-slate-600/50"></div>
+              </div>
+
+              {/* Text Content */}
+              <div className="lg:order-1 text-center lg:text-left">
+                <h1
+                  className="min-w-max text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium text-slate-200 leading-tight"
+                  style={{ fontFamily: 'Array, sans-serif' }}
+                >
+                  Hey, I'm
+                  <span className="block text-transparent text-4xl sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text bg-gradient-to-r from-slate-300 to-slate-500 mt-2">
+                    Sidou
+                  </span>
+                </h1>
+
+                {/* Divider with Peace Logo */}
+                <div className="flex items-center justify-center lg:justify-start gap-3 mt-6">
+                  <div className="w-12 h-0.5 bg-slate-600/50"></div>
+                  <img
+                    className="w-10 h-10 transform hover:rotate-12 transition-transform duration-300"
+                    src={assets.PeaceLogo}
+                    alt="Peace"
+                  />
+                  <div className="w-12 h-0.5 bg-slate-600/50"></div>
+                </div>
               </div>
             </div>
 
             {/* Description */}
             <p className="text-lg sm:text-xl text-slate-400 max-w-2xl leading-relaxed mb-10">
               <strong className="text-slate-300 font-semibold">21-year-old full-stack developer</strong> from Algeria,
-              specializing in <span className="text-slate-300">e-commerce solutions</span> that help startups 
+              specializing in <span className="text-slate-300">e-commerce solutions</span> that help startups
               scale their business. Passionate about creating performant, scalable web applications.
             </p>
 
+
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start mb-12">
-              <Link 
-                to={'/projects'} 
+              <Link
+                to={'/projects'}
                 className="group relative px-8 py-4 bg-gradient-to-r from-slate-800 to-slate-900 border border-slate-700 rounded-xl text-slate-300 hover:text-slate-200 hover:border-slate-600 transition-all duration-300 flex items-center gap-3 min-w-[180px] justify-center"
               >
-                <span className="text-lg font-medium" style={{fontFamily:'Array'}}>View Projects</span>
-                <svg 
-                  className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
-                  fill="none" 
-                  stroke="currentColor" 
+                <span className="text-lg font-medium" style={{ fontFamily: 'Array' }}>View Projects</span>
+                <svg
+                  className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
 
-              <Link 
-                to={'/resume'} 
+              <Link
+                to={'/resume'}
                 className="group relative px-8 py-4 bg-slate-300 text-slate-900 rounded-xl font-medium hover:bg-slate-400 transition-all duration-300 flex items-center gap-3 min-w-[180px] justify-center"
               >
-                <span className="text-lg font-medium" style={{fontFamily:'Array'}}>Resume</span>
-                <svg 
-                  className="w-5 h-5 transform group-hover:translate-y-0.5 transition-transform duration-300" 
-                  fill="none" 
-                  stroke="currentColor" 
+                <span className="text-lg font-medium" style={{ fontFamily: 'Array' }}>Resume</span>
+                <svg
+                  className="w-5 h-5 transform group-hover:translate-y-0.5 transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -83,8 +99,8 @@ const Hero = () => {
               <span className="text-sm text-slate-500 font-medium">Connect with me</span>
               <div className="flex gap-5 items-center">
                 {[
-                  { 
-                    href: "https://ssidouuslm@gmail.com", 
+                  {
+                    href: "https://ssidouuslm@gmail.com",
                     label: "Email",
                     icon: (
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -92,8 +108,8 @@ const Hero = () => {
                       </svg>
                     )
                   },
-                  { 
-                    href: "https://github.com/sidouslm", 
+                  {
+                    href: "https://github.com/sidouslm",
                     label: "GitHub",
                     icon: (
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -101,8 +117,8 @@ const Hero = () => {
                       </svg>
                     )
                   },
-                  { 
-                    href: "https://linkedin.com", 
+                  {
+                    href: "https://linkedin.com",
                     label: "LinkedIn",
                     icon: (
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 1920 1920">
@@ -127,11 +143,11 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Stats/Cards */}
-          
+
         </div>
 
         {/* Scroll Indicator */}
-      
+
       </div>
     </div>
   )

@@ -3,13 +3,16 @@ import React from 'react'
 const Skills = () => {
   return (
     <div className='px-3'>
-        <hr className='w-full border-slate-700 my-5'/>
-        <p className='text-slate-400 text-4xl ' style={{fontFamily:'Array'}}>Skills</p>
-      <div className='flex gap-3 md:w-[55%] w-full h-max my-4 flex-wrap md:max-[300px] '>
-        {['React', 'Node.js', 'MongoDB', 'Express', 'CSS', 'Tailwind CSS', 'JavaScript', 'Python'].map((item,index)=>(
-            <button key={index} className=' text-sm w-max py-2 px-2 rounded-xl bg-slate-800 text-slate-400 cursor-pointer hover:bg-slate-900 transition-all '>
-                {item}
-            </button>
+      <hr className='w-full border-slate-700 my-5' />
+      <p className='text-slate-400 text-4xl ' style={{ fontFamily: 'Array' }}>Skills</p>
+      <div className="flex flex-wrap gap-3 my-8 justify-center lg:justify-start cursor-pointer">
+        {['React', 'Node.js', 'MongoDB', 'Tailwind', 'Express','Python','JavaScript','Html', 'Css'].map((tech) => (
+          <span
+            key={tech}
+            className="px-3 py-1.5 bg-slate-800/40 border border-slate-700/30 rounded-lg text-sm text-slate-400 hover:text-slate-300 hover:border-slate-600 transition-colors"
+          >
+            {tech}
+          </span>
         ))}
       </div>
     </div>

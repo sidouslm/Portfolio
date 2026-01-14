@@ -6,9 +6,11 @@ import linkedin from './linkedin.svg'
 import EcommerceVideo from './EcommerceVideo.mp4'
 import EcommerceThumbnail from './thumbnail.png'
 import socodeLogo from './socode.jpg'
+import ProfilePic from './pfp.png'
 
 
 const assets = {
+  ProfilePic,
   socodeLogo,
   EcommerceThumbnail,
   EcommerceVideo,
