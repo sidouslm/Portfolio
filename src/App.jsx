@@ -14,7 +14,7 @@ import Squares from './components/Background.jsx';
 const App = () => {
   return (
     <div >
-      <div className='fixed inset-0 -z-50 opacity-20' >
+      <div className='fixed inset-0 -z-50 opacity-20 bg-black' >
 
         <Squares
           speed={0.5}
